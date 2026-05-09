@@ -1,27 +1,55 @@
 
-console.log("¡Bienvenido al sistema interactivo!");
+const welcome = "¡Bienvenido al sistema interactivo!"
+console.log(welcome);
+alert(welcome)
 
 let myName = prompt("¿Cuál es tu nombre?");
+let mensaje
+
+
+while (myName === ""){
+    mensaje = "Error: Por favor, ingresa un nombre válido."
+    console.error(mensaje);
+    alert(mensaje);
+    myName = prompt("¿Cuál es tu nombre?");
+}
+
 let myAge = prompt("¿Cuál es tu edad?");
+let myAgeNumber = Number(myAge);
 
-const myAgeNumber = Number(myAge);
+while (isNaN(myAgeNumber) || myAge <= 0  || myAge === ""){
+    mensaje = "Error: Por favor, ingresa una edad válida."
+    console.error(mensaje);
+    alert(mensaje);
+    myAge = prompt("¿Cuál es tu edad?");
+    myAgeNumber = Number(myAge);
+}
 
-if (isNaN(myAgeNumber)) {
-    console.error("Error: Por favor, ingresa una edad válida en números.");
-    alert("Error: Por favor, ingresa una edad válida en números.");
-} 
-
-else if (myAgeNumber < 18) {
-    console.log(`Hola ${myName}, eres menor de edad. ¡Sigue aprendiendo y disfrutando del código!`);
-    alert(`Hola ${myName}, eres menor de edad. ¡Sigue aprendiendo y disfrutando del código!`);
+if (myAgeNumber < 18) {
+    mensaje = `Hola ${myName}, eres menor de edad. ¡Sigue aprendiendo y disfrutando del código!`
+    console.log(mensaje);
+    alert(mensaje);
 }
 
 else {
-    console.log(`Hola ${myName}, eres mayor de edad. ¡Prepárate para grandes oportunidades en el mundo de la programación!`);
-    alert(`Hola ${myName}, eres mayor de edad. ¡Prepárate para grandes oportunidades en el mundo de la programación!`);
+    mensaje = `Hola ${myName}, eres mayor de edad. ¡Prepárate para grandes oportunidades en el mundo de la programación!`
+    console.log(mensaje);
+    alert(mensaje);
 }
 
+
+
 /*
-En el HU1 de esta semana hacemos la utilizacion de prompt para solicitar al usuario que ingrese su nombre y su edad.
-luego nombramos una variable para convertir el string de la edad a numero y con if ademas de isNaN validamos si efectivamente el usuario ingreso un numero, si no es asi se muestra un mensaje de error con alert() y con concole.error() que lo deja registrado en la consola y luego utiliazmos esle if  y else para que se muestre un mensaje dependiendo de si el usuario es mayor o menor de edad.
+En el HU1 de esta semana hacemos la utilización de prompt para solicitar al usuario que ingrese su nombre y su edad.
+
+------ Validaciones ------
+- Utilizamos un 'while' para que el nombre no quede vacío. 
+- Utilizamos un 'while' para verificar que edad sea un número; cada una de las validaciones se encierra en un solo while utilizando el 'operador lógico' or (||)
+    -Con 'isNaN' para verificar si efectivamente es un numero
+- Con myAge === "" para que la edad no quede en blanco 
+- Con myAge <= 0 para que no pueda poner números negativos o el cero.
+
+Después de realizar la validación, se aplica un if/else en el que, dependiendo de la edad, se genera un mensaje u otro.
+
+En este caso se declara la variable 'mensaje' al principio del programa y se le asigna un valor diferente en cada while y en el if/else para no repetir código.
 */
