@@ -56,7 +56,28 @@ mapCategoria.set("Oficina", "Silla Ergonómica");
 
 console.log(mapCategoria)
 
+// Iteración sobre las estructuras de datos
+
+//  for…in 
+/* En este caso con el 'for...in' recorremos el array de objetos que creamos al principio del ejercicio 'productos' debido a que itera sobre los índices se crea una variable que utilice el indice para que con el concole.log podamos mostrar la infonmación de cada objeto*/
 
 
+for (const indice in productos) {
+    const producto = productos[indice]; 
+
+    console.log(`índice: ${indice}, ID: ${producto.id}, Producto: ${producto.nombre}, Precio: $${producto.precio}`);
+}
 
 
+//  for…of 
+/* En este caso con 'for..of' recorremos todo el set y con console.log mostramos cada numero dentro del set */
+for (const numero of numerosSet) {
+    console.log(numero);
+}
+
+
+//  forEach
+
+mapCategoria.forEach(({categoria, item}) => {
+console.log(`categoria: ${categoria} | item: ${item}` );
+})
