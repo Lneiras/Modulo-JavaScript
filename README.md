@@ -33,7 +33,6 @@ El código está estructurado en base a 5 tareas principales (**Tasks**):
 │   ├── index.html
 │   └── sistema_interactivo.js
 ├── HU2M3/                  # Historia de Usuario 2 (Módulo 3 - ACTUAL)
-│   ├── index.html
 │   └── gestion_datos.js    # Archivo principal con la solución
 └── README.md               # Documentación general del proyecto (Módulo 3 - ACTUAL)
 ```
