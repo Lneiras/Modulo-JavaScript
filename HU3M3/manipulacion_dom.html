@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>manipulacion_dom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,19 +16,22 @@
     <h1>LISTA DE NOTAS</h1>
     <P>Escribe tu nota y agregala</P>
 
+    <div class="input-container">
+
     <input type="text" id="inputNota" placeholder="Agrega tu nota aquí">
 
     <button id="btnAgregarNota">Agregar Nota</button>
+    </div>
 
-    <ul id="listaNotas">
-        <li>nota por defecto</li>
-        
-    </ul>
-
+    <div class="lista-container">
+    <ul id="listaNotas"></ul>
+    </div>
 
 </main>
 
-<footer></footer>
+<footer>
+    <p>© 2026 Laura Neira. Todos los derechos reservados.</p>
+</footer>
 
     <script src="app.js"></script>
 </body>

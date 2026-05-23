@@ -1,0 +1,121 @@
+:root {
+    --color-texto: #050404;
+    --color-primario: #6A98B4;
+    --color-primario-oscuro: #3688be;
+    --color-fondo: #c1ddee;
+    --color-eliminar: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+}
+
+header, footer {
+    padding: 20px;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+h1, p {
+    margin: 0;
+    color: var(--color-texto);
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 2px rgba(106, 152, 180, 0.3);
+}
+
+#btnAgregarNota {
+    padding: 10px 24px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 300px;
+}
+
+#btnAgregarNota:hover {
+    background-color: var(--color-primario-oscuro);
+}
+
+.lista-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#listaNotas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ── Cada nota ── */
+
+#listaNotas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Botón eliminar ── */
+
+.btnEliminar {
+    background: none;
+    border: 1px solid var(--color-eliminar);
+    color: var(--color-eliminar);
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 13px;
+    white-space: nowrap; /* evita que el texto del botón se parta */
+}
+
+.btnEliminar:hover {
+    background-color: var(--color-eliminar);
+    color: white;
+}
