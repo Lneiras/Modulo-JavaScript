@@ -1,0 +1,55 @@
+{
+  "productos": [
+    {
+      "id": "SzO3B9-Wp34",
+      "name": "Pan",
+      "price": 500
+    },
+    {
+      "id": "u4Sql2Wcv7E",
+      "name": "Galleta",
+      "price": 1500
+    },
+    {
+      "id": "bWD_VgiSf2M",
+      "name": "Coca-Cola",
+      "price": 5000
+    },
+    {
+      "id": "IfE2SrSPs4U",
+      "name": "papa",
+      "price": 1500
+    },
+    {
+      "id": "MCZqrg8x4p0",
+      "name": "Helado",
+      "price": 6000
+    },
+    {
+      "id": "sYQqOaBhta8",
+      "name": "Pan",
+      "price": 600
+    },
+    {
+      "id": "NQHr2cVL_v4",
+      "name": "Pan",
+      "price": 1000
+    },
+    {
+      "id": "cRlf7nNT-N0",
+      "name": "Pan",
+      "price": 600
+    },
+    {
+      "id": "WKuWf1GHxCA",
+      "name": "Pan",
+      "price": 500
+    },
+    {
+      "id": "qd0I-AvRgpA",
+      "name": "Galleta",
+      "price": 1000
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

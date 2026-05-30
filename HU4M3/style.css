@@ -1,0 +1,175 @@
+
+:root {
+    --primary-color: #3b82f6;      
+    --primary-hover: #2563eb;      
+    --danger-color: #ef4444;        
+    --danger-hover: #dc2626;      
+    --bg-color: #f8fafc;          
+    --card-bg: #ffffff;            
+    --text-color: #1e293b;       
+    --text-muted: #64748b;       
+    --border-color: #e2e8f0;     
+    --radius: 8px;                 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+main {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    flex: 1;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: -4px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+
+button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    width: 100%;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#btnAgregar {
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 8px;
+}
+
+#btnAgregar:hover {
+    background-color: var(--primary-hover);
+}
+
+#btnSincronizar {
+    background-color: #10b981; /* Verde esmeralda para la API */
+    color: white;
+    margin-top: 10px;
+}
+
+#btnSincronizar:hover {
+    background-color: #059669;
+}
+
+
+#productList {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+#productList h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+#products {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#products li {
+    background-color: var(--bg-color);
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+
+.btnEliminar {
+    background-color: transparent;
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    width: auto; 
+}
+
+.btnEliminar:hover {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
