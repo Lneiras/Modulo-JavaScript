@@ -1,57 +1,115 @@
-﻿# M3S3 — Gestión dinámica del DOM con persistencia en el navegador
- 
-Mini aplicación de lista de notas que permite agregar y eliminar elementos en el DOM, con persistencia de datos usando Local Storage.
- 
----
- 
-## 📁 Estructura del proyecto
- 
+﻿# Mini Aplicación Web de Gestión de Productos
+
+## Descripción
+
+Este proyecto es una mini aplicación web desarrollada con HTML, CSS y JavaScript que permite gestionar una lista de productos mediante operaciones CRUD. La aplicación implementa manipulación dinámica del DOM, persistencia de datos mediante Local Storage y sincronización con una API REST utilizando Fetch API y JSON Server.
+
+## Funcionalidades
+
+- Agregar productos mediante un formulario.
+- Validación de datos ingresados por el usuario.
+- Mostrar productos dinámicamente en el DOM.
+- Eliminar productos de la lista.
+- Persistencia de datos utilizando Local Storage.
+- Sincronización con una API mediante Fetch API.
+- Operaciones CRUD:
+  - GET: Obtener productos.
+  - POST: Crear productos.
+  - PUT: Actualizar productos.
+  - DELETE: Eliminar productos.
+- Manejo de errores mediante `try...catch`.
+- Uso de JavaScript moderno (ES6+).
+
+## Tecnologías Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Local Storage
+- Fetch API
+- JSON Server
+
+## Estructura del Proyecto
+
 ```
-HU3M3/
-├── IMG/
-│   ├── Al cargar notas despues de actualizar.png
-│   ├── Console log.png
-│   ├── después de agregar nota.png
-│   ├── después de eliminar nota.png
-│   ├── DOM antes de agregar y eliminar.png
-│   └── local storage.png
-├── app.js
-├── manipulacion_dom.html
-├── style.css
-└── README.md
+├──HU4M3/                  # Historia de Usuario 4 (Módulo 3 - ACTUAL)
+│    ├── index.html
+│    ├── style.css
+│    ├── app.js
+│    ├── db.json
+└── README.md   
 ```
- 
----
- 
-## ⚙️ Funcionalidades
- 
-- **Agregar notas:** el usuario escribe un texto y lo agrega a la lista con el botón "Agregar Nota".
-- **Validación:** no se permite agregar notas vacías.
-- **Eliminar notas:** cada nota tiene un botón "Eliminar" que la remueve de la lista.
-- **Persistencia:** las notas se guardan en Local Storage y se recuperan automáticamente al recargar la página.
----
- 
-## 🧠 Conceptos aplicados
- 
-| Concepto | Uso en el proyecto |
-|---|---|
-| `querySelector` | Selección del input, botón y lista |
-| `getElementById` | Selección alternativa de elementos del DOM |
-| `createElement` | Creación dinámica de `<li>` y botones |
-| `appendChild` | Inserción de notas en la lista |
-| `removeChild` | Eliminación de notas del DOM |
-| `textContent` | Asignación del texto de cada nota |
-| `localStorage.setItem` | Guardar notas en el navegador |
-| `localStorage.getItem` | Recuperar notas al cargar la página |
-| `JSON.stringify / parse` | Convertir el arreglo a texto y viceversa |
-| `filter` | Eliminar una nota del arreglo en memoria |
- 
----
- 
-## 🚀 Cómo ejecutar el proyecto
- 
-1. Clona o descarga el repositorio.
-2. Asegúrate de que los tres archivos (`manipulacion_dom.html`, `app.js`, `style.css`) estén en la misma carpeta.
-3. Abre `manipulacion_dom.html` en tu navegador.
-No requiere instalación ni dependencias externas.
+
+## Instalación y Ejecución
+
+### 1. Clonar el repositorio
+
+```bash
+git clone <url-del-repositorio>
+```
+
+### 2. Instalar JSON Server
+
+```bash
+npm install -g json-server
+```
+
+O utilizando npx:
+
+```bash
+npm install json-server
+```
+
+### 3. Iniciar el servidor
+
+Ubicarse en la carpeta del proyecto y ejecutar:
+
+```bash
+npx json-server --watch db.json 
+```
+
+### 4. Abrir la aplicación
+
+Abrir el archivo `index.html` en el navegador o utilizar una extensión como Live Server.
+
+## API Utilizada
+
+La aplicación consume una API local creada con JSON Server.
+
+Endpoint principal:
+
+```
+Lo arroja la terminal 
+
+EJ: http://localhost:3000/productos
+```
+
+### Métodos soportados
+
+| Método | Descripción |
+|----------|------------|
+| GET | Obtener productos |
+| POST | Crear producto |
+| PUT | Actualizar producto |
+| DELETE | Eliminar producto |
+
+## Persistencia de Datos
+
+Los productos se almacenan localmente utilizando:
+
+```javascript
+localStorage.setItem()
+localStorage.getItem()
+```
+
+Esto permite conservar la información incluso después de recargar la página.
+
+## Evidencias de Funcionamiento
+
+Durante la ejecución se puede verificar:
+
+- Productos agregados en el DOM.
+- Productos almacenados en Local Storage.
+- Respuestas de la API en la consola.
+- Sincronización entre la aplicación y JSON Server.
  

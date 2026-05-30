@@ -7,8 +7,12 @@ const productList = document.querySelector("#productList")
 const productosUl = document.querySelector("#products")
 const btnSincronizar = document.querySelector("#btnSincronizar")
 
+/* en URL_API se coloca el puerto que aparece en la terminal al ejecutar el servidor
+primero se ejecuta npm install -g json-server
+y despues se ejecuta json-server --watch db.json
+*/
 
-const URL_API = 'http://localhost:4000/productos'
+const URL_API = 'http://localhost:3000/productos'
 
 let mensaje
 
@@ -141,12 +145,36 @@ async function guardarProductoAPI(nuevoProducto) {
             },
             body: JSON.stringify(nuevoProducto)
         });
+        if (!respuesta.ok) {
+        throw new Error('Error al guardar en la API');
+}
         const resultado = await respuesta.json();
         console.log("API POST Respuesta exitosa:", resultado);
     } catch (error) {
         console.error("Error en operación POST:", error.message);
     }
 }
+
+
+// PUT
+async function actualizarProductoAPI(id, productoActualizado) {
+    try {
+        const respuesta = await fetch(`${URL_API}/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(productoActualizado)
+        });
+
+        const resultado = await respuesta.json();
+        console.log("API PUT Respuesta exitosa:", resultado);
+
+    } catch (error) {
+        console.error("Error en operación PUT:", error.message);
+    }
+}
+
 
 // DELETE
 async function eliminarProductoAPI(id) {
